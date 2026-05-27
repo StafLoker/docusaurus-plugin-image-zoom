@@ -2,7 +2,7 @@
    <h1><b>docusaurus-plugin-image-zoom</b></h1>
    <p><i>Image zoom modal with pan and scroll zoom for Docusaurus</i></p>
    <p align="center">
-      <a href="https://www.npmjs.com/package/docusaurus-plugin-image-zoom">npm</a> ·
+      <a href="https://www.npmjs.com/package/@stafloker/docusaurus-plugin-image-zoom">npm</a> ·
       <a href="https://github.com/StafLoker/docusaurus-plugin-image-zoom/releases">Releases</a>
    </p>
 </div>
@@ -26,7 +26,7 @@
 # Installation
 
 ```bash
-npm install docusaurus-plugin-image-zoom
+npm install @stafloker/docusaurus-plugin-image-zoom
 ```
 
 Add to `docusaurus.config.js`:
@@ -36,7 +36,7 @@ export default {
   plugins: [
     // Required only if using ImageZoomIdeal
     ['@docusaurus/plugin-ideal-image', { quality: 85, max: 1920, min: 640, steps: 3 }],
-    'docusaurus-plugin-image-zoom',
+    '@stafloker/docusaurus-plugin-image-zoom',
   ],
 };
 ```

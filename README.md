@@ -25,8 +25,14 @@
 
 # Installation
 
+### npm
 ```bash
 npm install @stafloker/docusaurus-plugin-image-zoom
+```
+
+### GitHub Packages
+```bash
+npm install @stafloker/docusaurus-plugin-image-zoom --registry=https://npm.pkg.github.com
 ```
 
 Add to `docusaurus.config.js`:

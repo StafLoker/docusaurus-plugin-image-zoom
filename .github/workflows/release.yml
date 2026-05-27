@@ -6,7 +6,7 @@ on:
       - "v*.*.*"
 
 jobs:
-  publish:
+  publish-npm:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -22,8 +22,25 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+  publish-gh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@stafloker'
+      - run: npm ci
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   release:
-    needs: publish
+    needs: [publish-npm, publish-gh]
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -61,13 +78,17 @@ jobs:
 
             ## Install
 
-            ### Latest
+            ### npm — Latest
             ```bash
             npm install @stafloker/docusaurus-plugin-image-zoom
             ```
 
-            ### Versioned
+            ### npm — Versioned
             ```bash
             npm install @stafloker/docusaurus-plugin-image-zoom@${{ steps.version.outputs.version }}
+            ```
 
+            ### GitHub Packages
+            ```bash
+            npm install @stafloker/docusaurus-plugin-image-zoom@${{ steps.version.outputs.version }} --registry=https://npm.pkg.github.com
             ```

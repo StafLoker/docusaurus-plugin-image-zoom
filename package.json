@@ -1,0 +1,32 @@
+{
+  "name": "docusaurus-plugin-image-zoom",
+  "version": "1.0.0",
+  "description": "Docusaurus plugin that adds zoom modal with pan and scroll zoom to images.",
+  "main": "src/index.js",
+  "type": "module",
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "docusaurus",
+    "docusaurus-plugin",
+    "image",
+    "zoom",
+    "lightbox"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StafLoker/docusaurus-plugin-image-zoom"
+  },
+  "author": "StafLoker",
+  "license": "MIT",
+  "peerDependencies": {
+    "@docusaurus/core": ">=3.0.0",
+    "react": "^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@docusaurus/plugin-ideal-image": {
+      "optional": true
+    }
+  }
+}

@@ -1,12 +1,27 @@
-.thumbnail {
+.thumbnailContainer {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
   cursor: zoom-in;
+}
+
+.thumbnailContainer:hover .thumbnail {
+  opacity: 0.85;
+}
+
+.thumbnail {
   display: inline-block;
   border-radius: var(--ifm-global-radius);
   transition: opacity 0.2s;
 }
 
-.thumbnail:hover {
-  opacity: 0.85;
+.caption {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--ifm-color-secondary-darkest, #888);
+  line-height: 1.4;
+  user-select: none;
 }
 
 .overlay {

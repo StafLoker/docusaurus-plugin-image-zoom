@@ -19,6 +19,7 @@
 - Scroll to zoom in/out anchored to cursor position
 - Drag to pan when zoomed in
 - Close with click outside or `Escape`
+- Caption below the image in the page, taken from `alt` (toggleable)
 - Respects Docusaurus theme colors and border radius
 - Two components: base (`ImageZoom`) and optimized (`ImageZoomIdeal` via `plugin-ideal-image`)
 
@@ -76,14 +77,18 @@ import ImageZoomIdeal from '@theme/ImageZoomIdeal';
 
 ### ImageZoom
 
-| Prop  | Type   | Description       |
-| ----- | ------ | ----------------- |
-| `src` | string | Image URL or path |
-| `alt` | string | Alt text          |
+| Prop           | Type    | Default    | Description                                        |
+| -------------- | ------- | ---------- | -------------------------------------------------- |
+| `src`          | string  |            | Image URL or path                                  |
+| `alt`          | string  |            | Alt text (also used as caption)                    |
+| `showCaption`  | boolean | `true`     | Show caption below the image                       |
+| `captionAlign` | string  | `'center'` | Caption alignment: `'left'`, `'center'`, `'right'` |
 
 ### ImageZoomIdeal
 
-| Prop  | Type   | Description                                              |
-| ----- | ------ | -------------------------------------------------------- |
-| `img` | object | `require('./img.png')` processed by `plugin-ideal-image` |
-| `alt` | string | Alt text                                                 |
+| Prop           | Type    | Default    | Description                                              |
+| -------------- | ------- | ---------- | -------------------------------------------------------- |
+| `img`          | object  |            | `require('./img.png')` processed by `plugin-ideal-image` |
+| `alt`          | string  |            | Alt text (also used as caption)                          |
+| `showCaption`  | boolean | `true`     | Show caption below the image                             |
+| `captionAlign` | string  | `'center'` | Caption alignment: `'left'`, `'center'`, `'right'`       |

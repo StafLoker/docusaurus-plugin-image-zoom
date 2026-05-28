@@ -1,6 +1,6 @@
 {
   "name": "@stafloker/docusaurus-plugin-image-zoom",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Docusaurus plugin that adds zoom modal with pan and scroll zoom to images.",
   "main": "src/index.js",
   "type": "module",

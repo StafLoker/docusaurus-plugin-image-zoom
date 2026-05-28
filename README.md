@@ -78,7 +78,6 @@ import ImageZoomIdeal from '@theme/ImageZoomIdeal';
 
 ```mdx
 <ImageZoom src="/img/my-image.png" alt="Description" showCaption={false} />
-<ImageZoom src="/img/my-image.png" alt="Description" captionAlign="right" />
 ```
 
 
@@ -86,18 +85,16 @@ import ImageZoomIdeal from '@theme/ImageZoomIdeal';
 
 ### ImageZoom
 
-| Prop           | Type    | Default    | Description                                        |
-| -------------- | ------- | ---------- | -------------------------------------------------- |
-| `src`          | string  |            | Image URL or path                                  |
-| `alt`          | string  |            | Alt text (also used as caption)                    |
-| `showCaption`  | boolean | `true`     | Show caption below the image                       |
-| `captionAlign` | string  | `'center'` | Caption alignment: `'left'`, `'center'`, `'right'` |
+| Prop          | Type    | Default | Description                     |
+| ------------- | ------- | ------- | ------------------------------- |
+| `src`         | string  |         | Image URL or path               |
+| `alt`         | string  |         | Alt text (also used as caption) |
+| `showCaption` | boolean | `true`  | Show caption below the image    |
 
 ### ImageZoomIdeal
 
-| Prop           | Type    | Default    | Description                                              |
-| -------------- | ------- | ---------- | -------------------------------------------------------- |
-| `img`          | object  |            | `require('./img.png')` processed by `plugin-ideal-image` |
-| `alt`          | string  |            | Alt text (also used as caption)                          |
-| `showCaption`  | boolean | `true`     | Show caption below the image                             |
-| `captionAlign` | string  | `'center'` | Caption alignment: `'left'`, `'center'`, `'right'`       |
+| Prop          | Type    | Default | Description                                              |
+| ------------- | ------- | ------- | -------------------------------------------------------- |
+| `img`         | object  |         | `require('./img.png')` processed by `plugin-ideal-image` |
+| `alt`         | string  |         | Alt text (also used as caption)                          |
+| `showCaption` | boolean | `true`  | Show caption below the image                             |

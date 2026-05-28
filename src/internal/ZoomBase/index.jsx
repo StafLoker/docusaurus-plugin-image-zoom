@@ -6,7 +6,7 @@ const ZOOM_OUT  = 1 / ZOOM_IN;
 const SCALE_MIN = 1;
 const SCALE_MAX = 8;
 
-export default function ZoomBase({ thumbnail, fullSrc, alt, showCaption = true, captionAlign = 'center' }) {
+export default function ZoomBase({ thumbnail, fullSrc, alt, showCaption = true }) {
   const [open, setOpen] = useState(false);
   const [scale, setScale] = useState(1);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
@@ -62,7 +62,7 @@ export default function ZoomBase({ thumbnail, fullSrc, alt, showCaption = true, 
           {thumbnail}
         </div>
         {showCaption && alt && (
-          <p className={styles.caption} style={{ textAlign: captionAlign }}>{alt}</p>
+          <p className={styles.caption}>{alt}</p>
         )}
       </div>
 

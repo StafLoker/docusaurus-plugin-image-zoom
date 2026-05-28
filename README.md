@@ -72,6 +72,15 @@ import ImageZoomIdeal from '@theme/ImageZoomIdeal';
 <ImageZoomIdeal img={require('./my-image.png')} alt="Description" />
 ```
 
+### Optional props
+
+`showCaption` is a boolean — pass it with curly braces, not quotes:
+
+```mdx
+<ImageZoom src="/img/my-image.png" alt="Description" showCaption={false} />
+<ImageZoom src="/img/my-image.png" alt="Description" captionAlign="right" />
+```
+
 
 # Props
 

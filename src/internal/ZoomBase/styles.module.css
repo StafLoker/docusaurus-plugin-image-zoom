@@ -18,6 +18,7 @@
 
 .caption {
   margin: 0;
+  width: 100%;
   font-size: 0.8rem;
   color: var(--ifm-color-secondary-darkest, #888);
   line-height: 1.4;

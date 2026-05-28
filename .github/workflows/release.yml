@@ -19,11 +19,13 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Publish to npm
         run: |
+          set +e
           OUTPUT=$(npm publish --provenance --access public 2>&1)
           RC=$?
+          set -e
           echo "$OUTPUT"
           if [ $RC -ne 0 ]; then
-            grep -qiE "previously published|cannot publish over|version already exists" <<< "$OUTPUT" || exit $RC
+            echo "$OUTPUT" | grep -qiE "previously published|cannot publish over|version already exists" || exit $RC
             echo "Version already published, skipping."
           fi
 
@@ -41,11 +43,13 @@ jobs:
           scope: '@stafloker'
       - name: Publish to GitHub Packages
         run: |
+          set +e
           OUTPUT=$(npm publish 2>&1)
           RC=$?
+          set -e
           echo "$OUTPUT"
           if [ $RC -ne 0 ]; then
-            grep -qiE "previously published|cannot publish over|version already exists" <<< "$OUTPUT" || exit $RC
+            echo "$OUTPUT" | grep -qiE "previously published|cannot publish over|version already exists" || exit $RC
             echo "Version already published, skipping."
           fi
         env:
